@@ -1,0 +1,22 @@
+h1 {
+  color: green;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.dogs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 150px);
+  grid-gap: 10px;
+}
+
+.dogs .dog {
+  width: 150px;
+}
+
+.dogs .dog img {
+  width: 100%;
+}
