@@ -1,20 +1,18 @@
-h1 {
-  color: green;
-}
-
 .container {
-  width: 1200px;
+  --image-width: 150px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .dogs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 150px);
+  grid-template-columns: repeat(auto-fill, minmax(var(--image-width), 1fr));
   grid-gap: 10px;
+  justify-items: center;
 }
 
 .dogs .dog {
-  width: 150px;
+  width: var(--image-width);
 }
 
 .dogs .dog img {

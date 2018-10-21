@@ -4,7 +4,9 @@ class DogComponent {
     this.dogs = this.requestDogs("/assets/data/dogs.json").then(({ dogs }) => {
       dogs.forEach(dog => {
         const dogEl = new Dog(dog.image);
-        this.el.appendChild(dogEl.render());
+        dogEl.image.onload = () => {
+          this.el.appendChild(dogEl.render());
+        };
       });
     });
   }
