@@ -1,20 +1,102 @@
 .container {
-  --image-width: 150px;
-  max-width: 1200px;
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  background-color: #fff;
+  color: #444;
+}
+
+/* Header */
+.header {
+  grid-area: header;
+}
+
+.header--inner,
+.footer--inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: var(--max-width);
   margin: 0 auto;
 }
 
-.dogs {
+.header--title {
+  font-family: "ToysRusFont", Fallback, sans-serif;
+  line-height: 30px;
+}
+
+.header--title h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.header--title p {
+  margin: 0;
+  word-spacing: 5px;
+}
+
+.header--quote {
+  color: var(--color);
+  font-family: var(--font-serif);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 460px;
+}
+/* end header */
+
+/* Footer */
+.footer {
+  grid-area: footer;
+  color: var(--color);
+  font-family: var(--font-serif);
+  text-align: center;
+}
+/* end header */
+
+.body {
+  display: grid;
+  grid-area: content;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "filter grid grid grid";
+}
+
+.body--filter {
+  grid-area: filter;
+  background: lightblue;
+  min-width: 350px;
+}
+
+.body--grid {
+  --image-width: 200px;
+  grid-area: grid;
+  padding: 20px;
+  background: rgb(223, 247, 255);
+}
+
+.body--dogs {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--image-width), 1fr));
   grid-gap: 10px;
   justify-items: center;
 }
 
-.dogs .dog {
+.body--dogs .body--dogs-single {
+  height: 200px;
   width: var(--image-width);
+  overflow: hidden;
+  text-align: center;
 }
 
-.dogs .dog img {
-  width: 100%;
+.body--dogs .body--dogs-single img {
+  max-height: 100%;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

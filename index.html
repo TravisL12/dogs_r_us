@@ -11,30 +11,36 @@
 </head>
 
 <body>
-    <header class="global-header" role="banner">
-        <h1>Puppy image gallery</h1>
-
-        <blockquote class="header-quote">
-            <p>A dog will teach you unconditional love. If you can have that in your life, things won't be too bad.</p>
-
-            <cite>&mdash;Robert Wagner</cite>
-        </blockquote>
-    </header>
-
     <div class='container'>
-        <div class='title'>
-            <h1>Dogs R Us</h1>
-            <p>Get a smooch from a pooch</p>
-        </div>
-        <div id='dogs-data' class='dogs'>
+        <header class="header" role="banner">
+            <div class='header--inner'>
+                <div class='header--title'>
+                    <h1>Dogs 2 Us</h1>
+                    <p>get a smooch from a pooch</p>
+                </div>
 
+                <blockquote class="header--quote">
+                    <p>A dog will teach you unconditional love. If you can have that in your life, things won't be too
+                        bad.</p>
+
+                    <cite>&mdash;Robert Wagner</cite>
+                </blockquote>
+            </div>
+        </header>
+
+        <div class='body'>
+            <div class='body--filter'></div>
+            <div class="body--grid">
+                <div id='dogs-data' class='body--dogs'></div>
+            </div>
         </div>
+
+        <footer class="footer">
+            <div class='footer--inner'>
+                <p>Built by a wonderful developer for Asana.</p>
+            </div>
+        </footer>
     </div>
-
-    <footer class="global-footer">
-        <p>Built by a wonderful developer for Asana.</p>
-    </footer>
-
 </body>
 <script src='/public/js/index.js'></script>
 

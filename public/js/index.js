@@ -4,9 +4,7 @@ class DogComponent {
     this.dogs = this.requestDogs("/assets/data/dogs.json").then(({ dogs }) => {
       dogs.forEach(dog => {
         const dogEl = new Dog(dog.image);
-        dogEl.image.onload = () => {
-          this.el.appendChild(dogEl.render());
-        };
+        this.el.appendChild(dogEl.render());
       });
     });
   }
@@ -31,12 +29,19 @@ class Dog {
     this.name = "Rocko";
     this.image = new Image();
     this.image.src = imageUrl;
+    this.el = document.createElement("div");
+    this.el.classList = "body--dogs-single loading";
+    this.el.textContent = "Loading...";
+    this.image.onload = this.loadImage.bind(this);
+  }
+
+  loadImage() {
+    this.el.classList.remove("loading");
+    this.el.innerHTML = "";
+    this.el.appendChild(this.image);
   }
 
   render() {
-    this.el = document.createElement("div");
-    this.el.classList = "dog";
-    this.el.appendChild(this.image);
     return this.el;
   }
 }
