@@ -1,56 +1,79 @@
 .container {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   grid-template-areas:
-    "header header header"
-    "filter content content"
-    "footer footer footer";
+    "header"
+    "content"
+    "footer";
   background-color: #fff;
   color: #444;
 }
 
-/* Global Header */
+/* Header */
 .header {
   grid-area: header;
-  background: red;
 }
 
 .header--inner,
 .footer--inner {
   display: flex;
+  align-items: center;
   height: 100%;
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  background: pink;
 }
 
-/* Header Quote */
-.header-quote {
+.header--title {
+  font-family: "ToysRusFont", Fallback, sans-serif;
+  line-height: 30px;
+}
+
+.header--title h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.header--title p {
+  margin: 0;
+  word-spacing: 5px;
+}
+
+.header--quote {
   color: var(--color);
   font-family: var(--font-serif);
   margin-left: auto;
   margin-right: auto;
   max-width: 460px;
 }
+/* end header */
 
-/* Global Footer */
+/* Footer */
 .footer {
   grid-area: footer;
-  background: red;
   color: var(--color);
   font-family: var(--font-serif);
   text-align: center;
 }
-
-.filter {
-  grid-area: filter;
-  background: lightblue;
-}
+/* end header */
 
 .body {
+  display: grid;
   grid-area: content;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "filter grid grid";
+}
+
+.body--filter {
+  grid-area: filter;
+  background: lightblue;
+  min-width: 350px;
+}
+
+.body--grid {
+  grid-area: grid;
   padding: 20px;
+  background: rgb(223, 247, 255);
   --image-width: 150px;
 }
 

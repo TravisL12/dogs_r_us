@@ -4,10 +4,21 @@
   --font-serif: Georgia, serif;
   --color-secondary: #333;
   --color-link: #635ac7;
+  --font-size: 16px;
+  --max-width: 1200px;
 
   font-family: var(--font-sans);
   font-weight: normal;
   line-height: 1.5;
+}
+
+@font-face {
+  font-family: "ToysRusFont";
+  src: url("/public/fonts/toysrus-babiesrus-32273.ttf") format("truetype");
+}
+
+html {
+  font-size: var(--font-size);
 }
 
 body {
