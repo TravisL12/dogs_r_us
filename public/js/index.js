@@ -35,7 +35,7 @@ class Dog {
 
   render() {
     this.el = document.createElement("div");
-    this.el.classList = "dog";
+    this.el.classList = "body--dogs-single";
     this.el.appendChild(this.image);
     return this.el;
   }

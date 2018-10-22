@@ -1,22 +1,72 @@
 .container {
-  --image-width: 150px;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header header header"
+    "filter content content"
+    "footer footer footer";
+  background-color: #fff;
+  color: #444;
 }
 
-.dogs {
+/* Global Header */
+.header {
+  grid-area: header;
+  background: red;
+}
+
+.header--inner,
+.footer--inner {
+  display: flex;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: pink;
+}
+
+/* Header Quote */
+.header-quote {
+  color: var(--color);
+  font-family: var(--font-serif);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 460px;
+}
+
+/* Global Footer */
+.footer {
+  grid-area: footer;
+  background: red;
+  color: var(--color);
+  font-family: var(--font-serif);
+  text-align: center;
+}
+
+.filter {
+  grid-area: filter;
+  background: lightblue;
+}
+
+.body {
+  grid-area: content;
+  padding: 20px;
+  --image-width: 150px;
+}
+
+.body--dogs {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--image-width), 1fr));
   grid-gap: 10px;
   justify-items: center;
 }
 
-.dogs .dog {
+.body--dogs .body--dogs-single {
   height: 200px;
   width: var(--image-width);
   overflow: hidden;
 }
 
-.dogs .dog img {
+.body--dogs .body--dogs-single img {
   max-height: 100%;
 }
