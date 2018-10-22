@@ -60,8 +60,8 @@
 .body {
   display: grid;
   grid-area: content;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "filter grid grid";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "filter grid grid grid";
 }
 
 .body--filter {
@@ -71,10 +71,10 @@
 }
 
 .body--grid {
+  --image-width: 200px;
   grid-area: grid;
   padding: 20px;
   background: rgb(223, 247, 255);
-  --image-width: 150px;
 }
 
 .body--dogs {
@@ -88,8 +88,15 @@
   height: 200px;
   width: var(--image-width);
   overflow: hidden;
+  text-align: center;
 }
 
 .body--dogs .body--dogs-single img {
   max-height: 100%;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

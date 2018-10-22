@@ -8,6 +8,7 @@
   --max-width: 1200px;
 
   font-family: var(--font-sans);
+  font-size: var(--font-size);
   font-weight: normal;
   line-height: 1.5;
 }
@@ -15,10 +16,6 @@
 @font-face {
   font-family: "ToysRusFont";
   src: url("/public/fonts/toysrus-babiesrus-32273.ttf") format("truetype");
-}
-
-html {
-  font-size: var(--font-size);
 }
 
 body {
