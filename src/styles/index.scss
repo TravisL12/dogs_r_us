@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "ToysRusFont";
-  src: url("/public/fonts/toysrus-babiesrus-32273.ttf") format("truetype");
+  src: url("/assets/fonts/toysrus-babiesrus-32273.ttf") format("truetype");
 }
 
 body {
@@ -33,3 +33,5 @@ li {
   padding: 0;
   list-style: none;
 }
+
+@import "app";

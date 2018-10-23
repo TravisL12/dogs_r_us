@@ -1,4 +1,4 @@
-const dogData = [
+export const dogData = [
   {
     name: "Rocko",
     motto: "Chasing balls and barking at walls",
@@ -74,4 +74,29 @@ const dogData = [
     motto: "Chasing cats, and sniffing butts",
     breed: "Miniature Schnauzers"
   }
+];
+
+export const breeds = [
+  "Labrador",
+  "German Shepherd",
+  "Golden Retrievers",
+  "French Bulldogs",
+  "Bulldogs",
+  "Beagles",
+  "Poodles",
+  "Rottweilers",
+  "Yorkshire Terriers",
+  "Pointers",
+  "Boxers",
+  "Siberian Huskies",
+  "Dachshunds",
+  "Great Danes",
+  "Pembroke Welsh Corgis",
+  "Doberman Pinschers",
+  "Australian Shepherds",
+  "Miniature Schnauzers",
+  "Shih Tzu",
+  "Boston Terriers",
+  "Pomeranians",
+  "Havanese"
 ];
