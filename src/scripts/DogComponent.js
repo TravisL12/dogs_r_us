@@ -1,4 +1,5 @@
 import Dog from "./Dog";
+import { dogData } from "./dogData";
 
 class DogComponent {
   constructor(id) {
