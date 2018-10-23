@@ -1,6 +1,7 @@
 /* Globals */
 :root {
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-dog: "ToysRusFont", Fallback, sans-serif;
   --font-serif: Georgia, serif;
   --color-secondary: #333;
   --color-link: #635ac7;
@@ -24,4 +25,11 @@ body {
 
 a {
   color: var(--color-link);
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
