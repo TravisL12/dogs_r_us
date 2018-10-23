@@ -1,4 +1,6 @@
 import DogComponent from "./DogComponent";
 import "../styles/index.scss";
 
-new DogComponent("dogs-data");
+document.addEventListener("DOMContentLoaded", () => {
+  new DogComponent("dogs-data");
+});
