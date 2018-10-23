@@ -18,7 +18,7 @@ module.exports = {
     }
   },
   plugins: [
-    new CleanWebpackPlugin(["build"], { root: Path.resolve(__dirname, "..") }),
+    new CleanWebpackPlugin(Path.resolve(__dirname, "build")),
     new CopyWebpackPlugin([
       { from: Path.resolve(__dirname, "assets"), to: "assets" }
     ]),
@@ -33,11 +33,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.mjs$/,
-        include: /node_modules/,
-        type: "javascript/auto"
-      },
       {
         test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
         use: {
