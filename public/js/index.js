@@ -7,7 +7,7 @@ function createTemplate(html) {
 class DogComponent {
   constructor(id) {
     this.el = document.getElementById(id);
-    this.dogs = this.requestDogs("/assets/data/dogs.json").then(({ dogs }) => {
+    this.dogs = this.requestDogs("assets/data/dogs.json").then(({ dogs }) => {
       dogs.forEach((dog, idx) => {
         const dogEl = new Dog(dog.image, dogData[idx]);
         this.el.appendChild(dogEl.render());
