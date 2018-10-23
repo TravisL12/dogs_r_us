@@ -1,22 +1,3 @@
-const dogNames = [
-  { name: "Rocko", motto: "Chasing balls and barking at walls" },
-  { name: "Fido", motto: "Sniffing butts and taking names." },
-  { name: "Spike", motto: "Aspires to meet the mail man one day." },
-  { name: "Oliver", motto: "Chasing cats, and sniffing butts" },
-  { name: "Princess", motto: "Chasing cats, and sniffing butts" },
-  { name: "Zelda", motto: "Chasing cats, and sniffing butts" },
-  { name: "Joe", motto: "Chasing cats, and sniffing butts" },
-  { name: "Snoopy", motto: "Chasing cats, and sniffing butts" },
-  { name: "Mr. Pickles", motto: "Chasing cats, and sniffing butts" },
-  { name: "Ms. Snuggles", motto: "Chasing cats, and sniffing butts" },
-
-  { name: "Brutus", motto: "Chasing cats, and sniffing butts" },
-  { name: "Chomper", motto: "Chasing cats, and sniffing butts" },
-  { name: "Strider", motto: "Chasing cats, and sniffing butts" },
-  { name: "Dr. Lix", motto: "Chasing cats, and sniffing butts" },
-  { name: "Sniffles", motto: "Chasing cats, and sniffing butts" }
-];
-
 function createTemplate(html) {
   const template = document.createElement("template");
   template.innerHTML = html;
@@ -28,7 +9,7 @@ class DogComponent {
     this.el = document.getElementById(id);
     this.dogs = this.requestDogs("/assets/data/dogs.json").then(({ dogs }) => {
       dogs.forEach((dog, idx) => {
-        const dogEl = new Dog(dog.image, dogNames[idx]);
+        const dogEl = new Dog(dog.image, dogData[idx]);
         this.el.appendChild(dogEl.render());
       });
     });
@@ -63,7 +44,7 @@ class Dog {
       </div>
     `);
 
-    this.image.onload = this.loadImage.bind(this);
+    this.image.onload = this.loadProfile.bind(this);
   }
 
   appendImage() {
@@ -73,7 +54,7 @@ class Dog {
     imageEl.appendChild(this.image);
   }
 
-  appendProfile() {
+  appendName() {
     const profile = createTemplate(`
         <span>${this.name}</span>
     `);
@@ -83,9 +64,9 @@ class Dog {
     profileEl.appendChild(profile);
   }
 
-  loadImage() {
+  loadProfile() {
     this.appendImage();
-    this.appendProfile();
+    this.appendName();
   }
 
   render() {
