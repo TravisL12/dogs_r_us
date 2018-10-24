@@ -1,14 +1,22 @@
 import Dog from "./Dog";
 import { dogData } from "./dogData";
 
-class DogComponent {
-  constructor(id) {
+class Gallery {
+  constructor(id, profileModal) {
     this.el = document.getElementById(id);
-    this.dogs = this.requestDogs("assets/data/dogs.json").then(({ dogs }) => {
-      dogs.forEach((dog, idx) => {
-        const dogEl = new Dog(dog.image, dogData[idx]);
-        this.el.appendChild(dogEl.render());
+    this.modal = profileModal;
+
+    this.requestDogs("assets/data/dogs.json").then(({ dogs }) => {
+      this.dogs = dogs.map((dog, idx) => {
+        return new Dog(dog.image, dogData[idx], this.modal.showProfile);
       });
+      this.appendDogs();
+    });
+  }
+
+  appendDogs() {
+    this.dogs.forEach(dog => {
+      this.el.appendChild(dog.render());
     });
   }
 
@@ -27,4 +35,4 @@ class DogComponent {
   }
 }
 
-export default DogComponent;
+export default Gallery;

@@ -34,5 +34,19 @@ li {
   list-style: none;
 }
 
+.container {
+  --grid-background: rgb(223, 247, 255);
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  background-color: #fff;
+  color: #444;
+}
+
 @import "header-footer";
-@import "app";
+@import "gallery";
+@import "profile-view";

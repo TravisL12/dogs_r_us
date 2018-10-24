@@ -1,29 +1,16 @@
-.container {
-  --grid-background: rgb(223, 247, 255);
-  display: grid;
-  min-height: 100vh;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "header"
-    "content"
-    "footer";
-  background-color: #fff;
-  color: #444;
-}
-
-.body {
+.gallery {
   display: grid;
   grid-area: content;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: "filter grid grid grid";
 
-  .body--filter {
+  .gallery--filter {
     grid-area: filter;
     background: lightblue;
     min-width: 350px;
   }
 
-  .body--grid {
+  .gallery--grid {
     --image-width: 200px;
     grid-area: grid;
     padding: 20px;
@@ -31,13 +18,13 @@
   }
 }
 
-.body--dogs {
+.gallery--dogs {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--image-width), 1fr));
   grid-gap: 10px;
   justify-items: center;
 
-  .body--dogs-single {
+  .gallery--dogs-single {
     display: flex;
     flex-direction: column;
     min-height: 200px;
