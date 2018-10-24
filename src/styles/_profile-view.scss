@@ -22,6 +22,7 @@
     background: rgb(219, 241, 247);
     width: auto;
     max-height: 800px;
+    height: 800px;
     padding: 5px;
     box-sizing: border-box;
     border-radius: 3px;
@@ -29,7 +30,7 @@
   }
 
   .profile--image {
-    height: 600px;
+    height: 85%;
 
     img {
       box-sizing: border-box;
@@ -39,8 +40,6 @@
   }
 
   .profile--details {
-    padding: 5px;
-
     h1,
     h2 {
       margin: 0;
