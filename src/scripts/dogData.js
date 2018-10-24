@@ -2,101 +2,101 @@ export const dogData = [
   {
     name: "Rocko",
     motto: "Chasing balls and barking at walls",
-    breed: "French Bulldogs"
+    breed: "French Bulldog"
   },
   {
     name: "Fido",
     motto: "Sniffing butts and taking names.",
-    breed: "Bulldogs"
+    breed: "Bulldog"
   },
   {
     name: "Spike",
     motto: "Aspires to meet the mail man one day.",
-    breed: "Beagles"
+    breed: "Beagle"
   },
   {
     name: "Oliver",
     motto: "Determined to find out who's been a good boy.",
-    breed: "Poodles"
+    breed: "Poodle"
   },
   {
     name: "Princess",
     motto: "Chasing cats, and sniffing butts",
-    breed: "Rottweilers"
+    breed: "Rottweiler"
   },
   {
     name: "Zelda",
     motto: "Chasing cats, and sniffing butts",
-    breed: "Yorkshire Terriers"
+    breed: "Yorkshire Terrier"
   },
   {
     name: "Joe",
     motto: "Discovering new, exotic trees and peeing on them",
-    breed: "Pointers"
+    breed: "Pointer"
   },
   {
     name: "Snoopy",
     motto: "Chasing cats, and sniffing butts",
-    breed: "Boxers"
+    breed: "Boxer"
   },
   {
     name: "Mr. Pickles",
     motto: "Chasing cats, and sniffing butts",
-    breed: "Siberian Huskies"
+    breed: "Siberian Huskie"
   },
   {
     name: "Ms. Snuggles",
     motto: "Chasing cats, and sniffing butts",
-    breed: "Dachshunds"
+    breed: "Dachshund"
   },
   {
     name: "Brutus",
     motto: "Chasing cats, and sniffing butts",
-    breed: "Great Danes"
+    breed: "Great Dane"
   },
   {
     name: "Chomper",
     motto: "Chasing cats, and sniffing butts",
-    breed: "Pembroke Welsh Corgis"
+    breed: "Pembroke Welsh Corgi"
   },
   {
     name: "Strider",
     motto: "Chasing cats, and sniffing butts",
-    breed: "Doberman Pinschers"
+    breed: "Doberman Pinscher"
   },
   {
     name: "Dr. Lix",
     motto: "Chasing cats, and sniffing butts",
-    breed: "Australian Shepherds"
+    breed: "Australian Shepherd"
   },
   {
     name: "Sniffles",
     motto: "Chasing cats, and sniffing butts",
-    breed: "Miniature Schnauzers"
+    breed: "Miniature Schnauzer"
   }
 ];
 
 export const breeds = [
   "Labrador",
   "German Shepherd",
-  "Golden Retrievers",
-  "French Bulldogs",
-  "Bulldogs",
-  "Beagles",
-  "Poodles",
-  "Rottweilers",
-  "Yorkshire Terriers",
-  "Pointers",
-  "Boxers",
-  "Siberian Huskies",
-  "Dachshunds",
-  "Great Danes",
-  "Pembroke Welsh Corgis",
-  "Doberman Pinschers",
-  "Australian Shepherds",
-  "Miniature Schnauzers",
+  "Golden Retriever",
+  "French Bulldog",
+  "Bulldog",
+  "Beagle",
+  "Poodle",
+  "Rottweiler",
+  "Yorkshire Terrier",
+  "Pointer",
+  "Boxer",
+  "Siberian Huskie",
+  "Dachshund",
+  "Great Dane",
+  "Pembroke Welsh Corgi",
+  "Doberman Pinscher",
+  "Australian Shepherd",
+  "Miniature Schnauzer",
   "Shih Tzu",
-  "Boston Terriers",
-  "Pomeranians",
+  "Boston Terrier",
+  "Pomeranian",
   "Havanese"
 ];
