@@ -17,9 +17,9 @@ class ProfileView {
   }
 
   close() {
-    this.el.innerHTML = "";
-    this.isOpen = false;
     this.el.classList.remove("visible");
+    this.isOpen = false;
+    this.el.innerHTML = "";
   }
 
   showProfile(dog) {
@@ -30,7 +30,14 @@ class ProfileView {
     const template = createTemplate(`
       <div class='profile--inner'>
         <div class="closeButton">Close</div>
-        <h1>hey ${dog.name}</h1>
+        <div class='profile--image'>
+          <img src=${dog.image.src}>
+        </div>
+        <div class='profile--details'>
+          <h1 class="list name">${dog.name}</h1>
+          <h2 class="list breed">${dog.breed}</h2>
+          <h2 class="list motto">${dog.motto}</h2>
+        </div>
       </div>
     `);
     this.el.appendChild(template);

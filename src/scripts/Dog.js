@@ -1,9 +1,10 @@
 import { createTemplate } from "./utilities";
 
 class Dog {
-  constructor(imageUrl, { name, motto }, showProfile) {
+  constructor(imageUrl, { name, motto, breed }, showProfile) {
     this.name = name;
     this.motto = motto;
+    this.breed = breed;
     this.image = new Image();
     this.image.src = imageUrl;
     this.showProfile = showProfile;

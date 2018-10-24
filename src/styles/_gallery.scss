@@ -27,19 +27,24 @@
   .gallery--dogs-single {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
     min-height: 200px;
     width: var(--image-width);
     padding: 8px 8px 0;
     background: white;
     box-sizing: border-box;
     border-radius: 3px;
+    transition: 0.2s background linear;
+
+    &:hover {
+      background: whitesmoke;
+    }
 
     .image {
       width: 100%;
       height: 150px;
       overflow: hidden;
       text-align: center;
-      background: white;
 
       img {
         max-height: 100%;

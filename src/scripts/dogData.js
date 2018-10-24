@@ -16,7 +16,7 @@ export const dogData = [
   },
   {
     name: "Oliver",
-    motto: "Chasing cats, and sniffing butts",
+    motto: "Determined to find out who's been a good boy.",
     breed: "Poodles"
   },
   {
@@ -31,7 +31,7 @@ export const dogData = [
   },
   {
     name: "Joe",
-    motto: "Discovering new, exotic trees. Then peeing on them",
+    motto: "Discovering new, exotic trees and peeing on them",
     breed: "Pointers"
   },
   {
