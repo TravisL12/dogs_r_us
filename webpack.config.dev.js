@@ -7,7 +7,7 @@ const dest = Path.join(__dirname, "dist");
 
 module.exports = merge(common, {
   mode: "development",
-  devtool: "cheap-eval-source-map",
+  devtool: "source-map",
   output: {
     chunkFilename: "js/[name].chunk.js"
   },

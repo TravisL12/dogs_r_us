@@ -1,0 +1,42 @@
+.header {
+  grid-area: header;
+}
+
+.header--inner,
+.footer--inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.header--title {
+  font-family: var(--font-dog);
+  line-height: 30px;
+
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    word-spacing: 5px;
+  }
+}
+
+.header--quote {
+  color: var(--color);
+  font-family: var(--font-serif);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 460px;
+}
+
+.footer {
+  grid-area: footer;
+  color: var(--color);
+  font-family: var(--font-serif);
+  text-align: center;
+}
