@@ -5,6 +5,15 @@ class ProfileView {
     this.el = document.getElementById(id);
     this.showProfile = this.showProfile.bind(this);
     this.isOpen = false;
+    this.el.addEventListener("click", this.clickOutside.bind(this));
+  }
+
+  clickOutside(event) {
+    if (event.target != this.el) {
+      return;
+    }
+
+    this.close();
   }
 
   close() {
