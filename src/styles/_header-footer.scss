@@ -40,3 +40,18 @@
   font-family: var(--font-serif);
   text-align: center;
 }
+
+@include phone-media {
+  .header {
+    padding: 25px 0 15px;
+  }
+  .header--inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header--quote {
+    display: none;
+  }
+}
