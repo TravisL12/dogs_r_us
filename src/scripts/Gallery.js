@@ -7,8 +7,8 @@ class Gallery {
     this.modal = profileModal;
 
     this.requestDogs("assets/data/dogs.json").then(({ dogs }) => {
-      this.dogs = dogs.map((dog, idx) => {
-        return new Dog(dog.image, dogData[idx], this.modal.showProfile);
+      this.dogs = dogs.map(dog => {
+        return new Dog(dog, this.modal.showProfile);
       });
       this.appendDogs();
     });

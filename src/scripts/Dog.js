@@ -1,12 +1,12 @@
 import { createTemplate } from "./utilities";
 
 class Dog {
-  constructor(imageUrl, { name, motto, breed }, showProfile) {
+  constructor({ image, name, motto, breed }, showProfile) {
     this.name = name;
     this.motto = motto;
     this.breed = breed;
     this.image = new Image();
-    this.image.src = imageUrl;
+    this.image.src = image;
     this.showProfile = showProfile;
     this.el = createTemplate(`
       <div class="gallery--dogs-single loading">

@@ -3,8 +3,8 @@ $image-width: 200px;
 .gallery {
   display: grid;
   grid-area: content;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "filter grid grid grid";
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "filter grid grid grid grid";
 
   .gallery--filter {
     grid-area: filter;
