@@ -66,3 +66,23 @@
     }
   }
 }
+
+@include phone-media {
+  .profile-modal {
+    .profile--inner {
+      max-height: 350px;
+      height: 350px;
+    }
+
+    .profile--image {
+      height: 75%;
+    }
+
+    .profile--details {
+      h1,
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
