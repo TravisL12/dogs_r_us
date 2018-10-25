@@ -2,14 +2,23 @@
 
 #### Come get a smooch from a pooch
 
-## Guidance from the design team
+To get started with Dogs R Us you will need to clone or download this repository.
 
-"These images should be displayed on the page as a set of thumbnails; clicking on a thumbnail should display a full-sized image to the user."
+### Prepare to Build
 
-"Full-size photos should be able to be closed, and the user should be returned to the thumbnail gallery."
+Navigate to the downloaded directory and install the dependencies by typing:
+`yarn` or `npm install`
 
-## Requirements from the adoption team
+You can click here to install [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable) or [NPM](https://www.npmjs.com/get-npm) if you do not have them installed already.
 
-"Starting next month, we'll be partnering with a shelter that has 2000 pets available for adoption. We need this page to be able to handle that many listings."
+### Build Instructions
 
-"Most people find out about us from internet searches. We need this page to appear towards the top of search results."
+You can now build a local copy and view it with the command:
+`yarn start` or `npm start`
+
+This will build a production version of Dogs R Us and open your browser for your viewing pleasure.
+
+### Development Instructions
+
+If you're interested in jumping in and helping make Dogs R Us the best it can be, you can run the `yarn dev` command
+to start a development environment. This dev environment has HMR (hot module reloading) enabled and all you have to do is code away!
