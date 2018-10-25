@@ -1,18 +1,12 @@
 /* Globals */
-:root {
-  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-dog: "ToysRusFont", Fallback, sans-serif;
-  --font-serif: Georgia, serif;
-  --color-secondary: #333;
-  --color-link: #635ac7;
-  --font-size: 16px;
-  --max-width: 1200px;
+$font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  font-family: var(--font-sans);
-  font-size: var(--font-size);
-  font-weight: normal;
-  line-height: 1.5;
-}
+$font-dog: "ToysRusFont", Fallback, sans-serif;
+$font-serif: Georgia, serif;
+$color-link: #635ac7;
+$font-size: 16px;
+$max-width: 1200px;
+$grid-background: rgb(223, 247, 255);
 
 @mixin phone-media {
   @media (max-width: 540px) {
@@ -27,6 +21,10 @@
 
 body {
   margin: 0;
+  font-family: $font-sans;
+  font-size: $font-size;
+  font-weight: normal;
+  line-height: 1.5;
 }
 
 a {
@@ -41,7 +39,6 @@ li {
 }
 
 .container {
-  --grid-background: rgb(223, 247, 255);
   display: grid;
   min-height: 100vh;
   grid-template-columns: 1fr;
