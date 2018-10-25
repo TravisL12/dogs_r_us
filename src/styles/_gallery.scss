@@ -1,21 +1,14 @@
 $image-width: 200px;
 
 .gallery {
-  display: grid;
-  grid-area: content;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-areas: "filter grid grid grid grid";
-
-  .gallery--filter {
-    grid-area: filter;
-    background: lightblue;
-    min-width: 250px;
-  }
+  width: 100%;
+  background: $grid-background;
+  align-self: center;
 
   .gallery--grid {
-    grid-area: grid;
-    padding: 20px;
-    background: $grid-background;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 50px 0;
   }
 }
 
@@ -63,13 +56,8 @@ $image-width: 200px;
 
 @include phone-media {
   .gallery {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-areas:
-      "filter"
-      "grid";
-
-    .gallery--filter {
-      min-height: 30px;
+    .gallery--grid {
+      width: auto;
     }
   }
 }
