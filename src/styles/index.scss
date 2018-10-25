@@ -9,7 +9,7 @@ $max-width: 1200px;
 $grid-background: rgb(223, 247, 255);
 
 @mixin phone-media {
-  @media (max-width: 540px) {
+  @media (max-width: 1024px) {
     @content;
   }
 }
@@ -28,7 +28,7 @@ body {
 }
 
 a {
-  color: var(--color-link);
+  color: $color-link;
 }
 
 ul,
