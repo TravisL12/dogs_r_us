@@ -11,7 +11,6 @@ class Dog {
     this.el = createTemplate(`
       <div class="gallery--dogs-single loading">
         <div class="image"></div>
-        <div class="profile"></div>
       </div>
     `);
 
@@ -32,19 +31,8 @@ class Dog {
     });
   }
 
-  appendName() {
-    const profile = createTemplate(`
-        <span>${this.name}</span>
-    `);
-
-    const profileEl = this.el.querySelector(".profile");
-    profileEl.innerHTML = "";
-    profileEl.appendChild(profile);
-  }
-
   loadProfile() {
     this.appendImage();
-    this.appendName();
   }
 
   render() {
