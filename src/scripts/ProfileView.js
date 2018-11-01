@@ -1,5 +1,9 @@
 import { createTemplate } from "./utilities";
 
+/**
+ * ProfileView - lightbox object for displaying full sized (dog) images
+ * id: string - DOM element ID to append to
+ */
 class ProfileView {
   constructor(id) {
     this.el = document.getElementById(id);
@@ -8,6 +12,7 @@ class ProfileView {
     this.el.addEventListener("click", this.clickOutside.bind(this));
   }
 
+  /* Callback function to check if the lightbox should be closed when clicking outside of it */
   clickOutside(event) {
     if (event.target != this.el) {
       return;
@@ -16,12 +21,14 @@ class ProfileView {
     this.close();
   }
 
+  /* Close the lightbox view */
   close() {
     this.el.classList.remove("visible");
     this.isOpen = false;
     this.el.innerHTML = "";
   }
 
+  /* Renders the dog profile */
   showProfile(dog) {
     if (this.isOpen) {
       return;

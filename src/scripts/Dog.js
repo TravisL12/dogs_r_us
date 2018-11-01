@@ -1,5 +1,13 @@
 import { createTemplate } from "./utilities";
 
+/**
+ * Dog Object for viewing in the Gallery
+ * image: string - URL (file path) to image location
+ * name: string - the Dog's name
+ * motto: string - info about dog
+ * breed: string - dog breed
+ * showProfile: boolean - flag to show dog in Gallery lightbox
+ */
 class Dog {
   constructor({ image, name, motto, breed }, showProfile) {
     this.name = name;
@@ -17,6 +25,7 @@ class Dog {
     this.image.onload = this.loadProfile.bind(this);
   }
 
+  /* Add loaded image to element */
   appendImage() {
     this.el.classList.remove("loading");
     const imageEl = this.el.querySelector(".image");
@@ -25,6 +34,7 @@ class Dog {
     this.addClickListener();
   }
 
+  /* Click listener to display dog in Gallery */
   addClickListener() {
     this.el.addEventListener("click", () => {
       this.showProfile(this);
