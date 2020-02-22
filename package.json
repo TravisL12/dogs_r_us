@@ -2,10 +2,12 @@
   "name": "dogs-r-us",
   "version": "1.0.0",
   "description": "Dog Shelter Site",
+  "homepage": "https://travisl12.github.io/dogs_r_us",
   "scripts": {
     "build": "webpack --config webpack.config.prod.js  --colors",
     "dev": "webpack-dev-server --open --config webpack.config.dev.js",
-    "start": "webpack-dev-server --open --config webpack.config.prod.js"
+    "start": "webpack-dev-server --open --config webpack.config.prod.js",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "dog shelter"
@@ -35,6 +37,7 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0"
+    "@babel/polyfill": "^7.0.0",
+    "gh-pages": "^2.2.0"
   }
 }
